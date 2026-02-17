@@ -133,7 +133,7 @@ const DebtRadar = () => {
     ];
 
     return (
-        <div className="debt-radar">
+        <div className="debt-radar" style={{ width: '100%', maxWidth: '100%' }}>
             <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
         
@@ -157,15 +157,22 @@ const DebtRadar = () => {
           box-sizing: border-box;
         }
         
+        html, body {
+          width: 100%;
+          height: 100%;
+          overflow-x: hidden;
+        }
+        
         body {
           background: var(--bg);
           font-family: 'IBM Plex Mono', monospace;
           color: var(--text);
-          overflow-x: hidden;
+          min-height: 100vh;
         }
         
         .debt-radar {
           min-height: 100vh;
+          width: 100%;
           background: 
             repeating-linear-gradient(
               45deg,
@@ -177,6 +184,7 @@ const DebtRadar = () => {
             radial-gradient(circle at 20% 30%, rgba(245, 166, 35, 0.03) 0%, transparent 50%),
             var(--bg);
           padding: 24px;
+          box-sizing: border-box;
         }
         
         @media (max-width: 1200px) {
@@ -498,6 +506,7 @@ const DebtRadar = () => {
           grid-template-columns: repeat(2, 1fr);
           gap: 20px;
           margin-bottom: 32px;
+          width: 100%;
         }
         
         .debt-card {
@@ -566,6 +575,7 @@ const DebtRadar = () => {
           grid-template-columns: 1fr 1fr;
           gap: 24px;
           margin-bottom: 32px;
+          width: 100%;
         }
         
         .panel {
@@ -654,6 +664,8 @@ const DebtRadar = () => {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           gap: 32px;
+          width: 100%;
+          box-sizing: border-box;
         }
         
         .stat-item {
