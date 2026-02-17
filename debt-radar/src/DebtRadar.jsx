@@ -135,7 +135,9 @@ const DebtRadar = () => {
   return (
     <div style={{
       minHeight: '100vh',
-      width: '100%',
+      width: '100vw',
+      maxWidth: '100%',
+      minWidth: '100%',
       background: `
         repeating-linear-gradient(
           45deg,
